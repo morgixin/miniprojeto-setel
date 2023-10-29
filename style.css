@@ -1,0 +1,160 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    height: 100vh; /* pega a altura completa da visão da página */
+    display: flex; /* distribui os elementos pela página */
+    flex-direction: column; 
+}
+
+.header, .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #D9EBFA;
+}
+
+.header {
+    border-bottom: 3px solid #7793AA;
+    padding: 0px 50px;
+}
+
+.header .links {
+    display: inherit; /* pega a herança do pai */
+}
+
+.header a {
+    margin-left: 10px;
+}
+
+.content {
+    padding: 0 50px;
+    height: 100%; /* pega 100% do espaço disponível */
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    background: linear-gradient(122deg, #2a446f 1.76%, #8FCCFE 97.48%); /* cor de fundo linear da div.content */
+}
+
+.content p, li {
+    color: white
+}
+
+.content .acessos {
+    display: none; /* esconde a parte de acessos na parte mobile */
+}
+
+.about {
+    max-width: 500px;
+}
+
+.hobbies, .top5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hobbies h4, .top5 h4 {
+    margin: 30px 10px 0 10px;
+}
+
+#photo {
+    height: 180px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.footer {
+    bottom: 0px;
+    width: 100%;
+}
+
+.footer > * {
+    margin: 15px 50px;
+}
+
+.icon-links a img {
+    margin-right: 5px;
+    height: 30px;
+    width: auto;
+}
+
+.footer > button {
+    padding: 5px 15px;
+    height:30px;
+    border: none;
+    border-radius: 5px;
+    background-color:#0B172A;
+    color: white
+}
+
+a {
+    text-decoration: none;
+    color: #2a446f
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 25px
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h1, h2, h4 {
+    color: #0B172A;
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        flex-direction: column;
+        height: auto
+    }
+    
+    .content .acessos {
+        display: block; /* deixa visível os acessos na versão mobile */
+    }
+
+    .footer {
+        position: relative;
+        height: auto;
+        width: auto;
+        flex-direction: column-reverse; /* inverte a ordem dos elementos */
+    }
+
+    .footer button {
+        margin-bottom: 0px;
+    }
+
+    .footer .acessos {
+        display: none;
+    }
+
+    h1 {
+        font-size: 20px;
+        width: 150px
+
+    }
+
+    .header {
+        padding: 0px 30px;
+        justify-content: space-evenly;
+    }
+
+    .content {
+        padding: 20px 30px;
+    }
+
+    .header a {
+        font-size: 16px;
+        margin-left: 8px;
+    }
+}
